@@ -8,91 +8,127 @@
 
 #import "MarginedCellsTableViewController.h"
 
-@interface MarginedCellsTableViewController ()
+static NSString * const TableViewCellIdentifier = @"TableViewCell";
 
+@interface TableViewCell : UITableViewCell
+@property (nonatomic, strong) UIView *customBackgroundView;
+@end
+
+@implementation TableViewCell
+
+- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
+{
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    if (self) {
+        [self createBackgroundView];
+    }
+    return self;
+}
+
+
+- (void)createBackgroundView
+{
+    // The frame for the view assigned to selectedBackgroundView will always be sized to match
+    // the contentView. Create a wrapper for this, and add the custom background view as its
+    // subview.
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 600, 50)];
+    view.clipsToBounds = YES;
+    view.backgroundColor = [UIColor whiteColor];
+
+    _customBackgroundView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 600, 50)];
+    _customBackgroundView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
+    _customBackgroundView.backgroundColor = [UIColor lightGrayColor];
+    [view addSubview:_customBackgroundView];
+
+    [self setSelectedBackgroundView:view];
+}
+
+
+- (void)setFrame:(CGRect)frame
+{
+    [super setFrame:frame];
+
+    CGFloat margin = ( CGRectGetWidth(self.frame) - 600.0 ) / 2.0;
+    if (margin > 0) {
+        self.layoutMargins = UIEdgeInsetsMake(0.0, margin, 0.0, margin);
+    }
+}
+
+
+- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event
+{
+    CGPoint convertedPoint = [self.window convertPoint:point toView:self.customBackgroundView];
+    // Don't respond to taps in margins.
+    if (!CGRectContainsPoint(self.customBackgroundView.bounds, convertedPoint)) {
+        return nil;
+    }
+    return [super hitTest:point withEvent:event];
+}
+
+@end
+
+
+
+@interface MarginedCellsTableViewController ()
 @end
 
 @implementation MarginedCellsTableViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+
+    [self.tableView registerClass:[TableViewCell class] forCellReuseIdentifier:TableViewCellIdentifier];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
-#pragma mark - Table view data source
+#pragma mark - TableView Delegate Methods
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
+
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+
+    return 50;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
+
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:TableViewCellIdentifier forIndexPath:indexPath];
+
+    cell.textLabel.text = @"Example Text";
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    cell.imageView.image = [UIImage imageNamed:@"sample"];
+
     return cell;
 }
-*/
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
     return YES;
 }
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+
 }
-*/
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
+
+- (NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return @"Delete";
 }
-*/
 
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
-*/
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

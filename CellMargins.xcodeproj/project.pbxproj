@@ -7,15 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E69A4DD81C03A16000E75F26 /* CenteredViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E69A4DD71C03A16000E75F26 /* CenteredViewController.m */; };
+		E69A4DDB1C03A17F00E75F26 /* MarginedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E69A4DDA1C03A17F00E75F26 /* MarginedTableViewController.m */; };
+		E69A4DDE1C03A19100E75F26 /* MarginedCellsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E69A4DDD1C03A19100E75F26 /* MarginedCellsTableViewController.m */; };
 		E6F5A49A1BFF72CF00D61EE3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E6F5A4991BFF72CF00D61EE3 /* main.m */; };
 		E6F5A49D1BFF72CF00D61EE3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E6F5A49C1BFF72CF00D61EE3 /* AppDelegate.m */; };
 		E6F5A4A01BFF72CF00D61EE3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6F5A49F1BFF72CF00D61EE3 /* ViewController.m */; };
 		E6F5A4A31BFF72CF00D61EE3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6F5A4A11BFF72CF00D61EE3 /* Main.storyboard */; };
 		E6F5A4A51BFF72CF00D61EE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6F5A4A41BFF72CF00D61EE3 /* Assets.xcassets */; };
 		E6F5A4A81BFF72CF00D61EE3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6F5A4A61BFF72CF00D61EE3 /* LaunchScreen.storyboard */; };
+		E6F5A4B11BFF736700D61EE3 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6F5A4B01BFF736700D61EE3 /* TableViewController.m */; };
+		E6F5A4B31BFF863500D61EE3 /* sample.png in Resources */ = {isa = PBXBuildFile; fileRef = E6F5A4B21BFF863500D61EE3 /* sample.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E69A4DD61C03A16000E75F26 /* CenteredViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CenteredViewController.h; sourceTree = "<group>"; };
+		E69A4DD71C03A16000E75F26 /* CenteredViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CenteredViewController.m; sourceTree = "<group>"; };
+		E69A4DD91C03A17F00E75F26 /* MarginedTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarginedTableViewController.h; sourceTree = "<group>"; };
+		E69A4DDA1C03A17F00E75F26 /* MarginedTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarginedTableViewController.m; sourceTree = "<group>"; };
+		E69A4DDC1C03A19100E75F26 /* MarginedCellsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarginedCellsTableViewController.h; sourceTree = "<group>"; };
+		E69A4DDD1C03A19100E75F26 /* MarginedCellsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarginedCellsTableViewController.m; sourceTree = "<group>"; };
 		E6F5A4951BFF72CF00D61EE3 /* CellMargins.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CellMargins.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6F5A4991BFF72CF00D61EE3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E6F5A49B1BFF72CF00D61EE3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -26,6 +37,9 @@
 		E6F5A4A41BFF72CF00D61EE3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E6F5A4A71BFF72CF00D61EE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E6F5A4A91BFF72CF00D61EE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E6F5A4AF1BFF736700D61EE3 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		E6F5A4B01BFF736700D61EE3 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		E6F5A4B21BFF863500D61EE3 /* sample.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sample.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +72,7 @@
 		E6F5A4971BFF72CF00D61EE3 /* CellMargins */ = {
 			isa = PBXGroup;
 			children = (
+				E6F5A4B21BFF863500D61EE3 /* sample.png */,
 				E6F5A49B1BFF72CF00D61EE3 /* AppDelegate.h */,
 				E6F5A49C1BFF72CF00D61EE3 /* AppDelegate.m */,
 				E6F5A49E1BFF72CF00D61EE3 /* ViewController.h */,
@@ -67,6 +82,14 @@
 				E6F5A4A61BFF72CF00D61EE3 /* LaunchScreen.storyboard */,
 				E6F5A4A91BFF72CF00D61EE3 /* Info.plist */,
 				E6F5A4981BFF72CF00D61EE3 /* Supporting Files */,
+				E6F5A4AF1BFF736700D61EE3 /* TableViewController.h */,
+				E6F5A4B01BFF736700D61EE3 /* TableViewController.m */,
+				E69A4DD61C03A16000E75F26 /* CenteredViewController.h */,
+				E69A4DD71C03A16000E75F26 /* CenteredViewController.m */,
+				E69A4DD91C03A17F00E75F26 /* MarginedTableViewController.h */,
+				E69A4DDA1C03A17F00E75F26 /* MarginedTableViewController.m */,
+				E69A4DDC1C03A19100E75F26 /* MarginedCellsTableViewController.h */,
+				E69A4DDD1C03A19100E75F26 /* MarginedCellsTableViewController.m */,
 			);
 			path = CellMargins;
 			sourceTree = "<group>";
@@ -139,6 +162,7 @@
 				E6F5A4A81BFF72CF00D61EE3 /* LaunchScreen.storyboard in Resources */,
 				E6F5A4A51BFF72CF00D61EE3 /* Assets.xcassets in Resources */,
 				E6F5A4A31BFF72CF00D61EE3 /* Main.storyboard in Resources */,
+				E6F5A4B31BFF863500D61EE3 /* sample.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,9 +173,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E69A4DDB1C03A17F00E75F26 /* MarginedTableViewController.m in Sources */,
+				E69A4DDE1C03A19100E75F26 /* MarginedCellsTableViewController.m in Sources */,
 				E6F5A4A01BFF72CF00D61EE3 /* ViewController.m in Sources */,
 				E6F5A49D1BFF72CF00D61EE3 /* AppDelegate.m in Sources */,
+				E69A4DD81C03A16000E75F26 /* CenteredViewController.m in Sources */,
 				E6F5A49A1BFF72CF00D61EE3 /* main.m in Sources */,
+				E6F5A4B11BFF736700D61EE3 /* TableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +328,7 @@
 				E6F5A4AE1BFF72CF00D61EE3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
