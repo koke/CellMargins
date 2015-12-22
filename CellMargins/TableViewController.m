@@ -10,6 +10,7 @@
 #import "CenteredViewController.h"
 #import "MarginedTableViewController.h"
 #import "MarginedCellsTableViewController.h"
+#import "EmbeddedTableView.h"
 
 static NSString * const TableViewCellIdentifier = @"TableViewCell";
 
@@ -36,7 +37,7 @@ static NSString * const TableViewCellIdentifier = @"TableViewCell";
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
-    return 3;
+    return 4;
 }
 
 
@@ -55,6 +56,9 @@ static NSString * const TableViewCellIdentifier = @"TableViewCell";
             break;
         case 2:
             text = @"Margined Cells";
+            break;
+        case 3:
+            text = @"Embedded Table";
             break;
         default:
             break;
@@ -79,6 +83,9 @@ static NSString * const TableViewCellIdentifier = @"TableViewCell";
             break;
         case 2:
             [self showMarginedCells];
+            break;
+        case 3:
+            [self showEmbeddedTable];
             break;
         default:
             break;
@@ -109,5 +116,10 @@ static NSString * const TableViewCellIdentifier = @"TableViewCell";
     [self.navigationController pushViewController:controller animated:YES];
 }
 
+- (void)showEmbeddedTable
+{
+    EmbeddedTableViewController *controller = [[EmbeddedTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
+    [self.navigationController pushViewController:controller animated:YES];
+}
 
 @end

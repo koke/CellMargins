@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E13BCA481C0EE64200BDA7F4 /* EmbeddedTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = E13BCA471C0EE64200BDA7F4 /* EmbeddedTableView.m */; };
 		E69A4DD81C03A16000E75F26 /* CenteredViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E69A4DD71C03A16000E75F26 /* CenteredViewController.m */; };
 		E69A4DDB1C03A17F00E75F26 /* MarginedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E69A4DDA1C03A17F00E75F26 /* MarginedTableViewController.m */; };
 		E69A4DDE1C03A19100E75F26 /* MarginedCellsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E69A4DDD1C03A19100E75F26 /* MarginedCellsTableViewController.m */; };
@@ -21,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E13BCA461C0EE64200BDA7F4 /* EmbeddedTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmbeddedTableView.h; sourceTree = "<group>"; };
+		E13BCA471C0EE64200BDA7F4 /* EmbeddedTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmbeddedTableView.m; sourceTree = "<group>"; };
 		E69A4DD61C03A16000E75F26 /* CenteredViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CenteredViewController.h; sourceTree = "<group>"; };
 		E69A4DD71C03A16000E75F26 /* CenteredViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CenteredViewController.m; sourceTree = "<group>"; };
 		E69A4DD91C03A17F00E75F26 /* MarginedTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarginedTableViewController.h; sourceTree = "<group>"; };
@@ -90,6 +93,8 @@
 				E69A4DDA1C03A17F00E75F26 /* MarginedTableViewController.m */,
 				E69A4DDC1C03A19100E75F26 /* MarginedCellsTableViewController.h */,
 				E69A4DDD1C03A19100E75F26 /* MarginedCellsTableViewController.m */,
+				E13BCA461C0EE64200BDA7F4 /* EmbeddedTableView.h */,
+				E13BCA471C0EE64200BDA7F4 /* EmbeddedTableView.m */,
 			);
 			path = CellMargins;
 			sourceTree = "<group>";
@@ -176,6 +181,7 @@
 				E69A4DDB1C03A17F00E75F26 /* MarginedTableViewController.m in Sources */,
 				E69A4DDE1C03A19100E75F26 /* MarginedCellsTableViewController.m in Sources */,
 				E6F5A4A01BFF72CF00D61EE3 /* ViewController.m in Sources */,
+				E13BCA481C0EE64200BDA7F4 /* EmbeddedTableView.m in Sources */,
 				E6F5A49D1BFF72CF00D61EE3 /* AppDelegate.m in Sources */,
 				E69A4DD81C03A16000E75F26 /* CenteredViewController.m in Sources */,
 				E6F5A49A1BFF72CF00D61EE3 /* main.m in Sources */,
